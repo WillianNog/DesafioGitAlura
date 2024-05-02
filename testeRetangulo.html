@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retângulo</title>
+    <style>
+        /* Estilo inicial */
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Define a altura do corpo para ocupar toda a altura da janela de visualização */
+            margin: 0; /* Remove as margens padrão do corpo */
+            font-family: 'Poppins', sans-serif; /* Define a fonte para a página */
+        }
+        .input-container {
+            display: flex;
+            justify-content: center; /* Alinha os grupos de input e label horizontalmente */
+            margin-bottom: 10px; /* Adiciona espaço entre os grupos */
+            padding-bottom: 25px;
+        }
+        .input-group {
+            display: flex;
+            flex-direction: column; /* Alinha os pares de label e input verticalmente */
+            align-items: center;
+            padding: 5px ;
+        }
+        .input-group label {
+            text-align: center; /* Centraliza o texto do label */
+        }
+        .input-group input {
+            margin-top: 5px; /* Adiciona espaço entre o label e o input */
+            border: 2px solid #7f7f7f; /* Adiciona uma borda ao redor dos inputs */
+            border-radius: 5px; /* Arredonda as bordas dos inputs */
+            padding: 8px; /* Adiciona um preenchimento interno aos inputs */
+            font-family: inherit; /* Usa a mesma fonte do corpo da página */
+            font-size: inherit; /* Usa o mesmo tamanho de fonte do corpo da página */
+            outline: none; /* Remove o contorno padrão dos inputs ao focar */
+            text-align: center;
+        }
+        .arrow-button {
+            width: 20px; /* Define a largura do botão */
+            height: 20px; /* Define a altura do botão */
+            background-color: #ddd; /* Define a cor de fundo do botão */
+            border: none; /* Remove a borda do botão */
+            border-radius: 50%; /* Faz o botão parecer redondo */
+            cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+            margin-left: 5px; /* Adiciona um espaço à esquerda do botão */
+        }
+        #retangulo {
+            width: 100px;
+            height: 100px;
+            border: 2px solid black; /* Corrige a definição da borda */
+            background-color: rgba(0, 179, 255, 0.409);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+    <!-- Importa a fonte Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap">
+</head>
+<body>
+    <div>
+        <h1>Defina largura e altura do retângulo</h1>
+        <div class="input-container">
+            <div class="input-group">
+                <span>
+                    <input placeholder="100 cm" type="text" id="largura" onkeydown="if (event.keyCode === 13) clickLargura()">
+                    </input>
+                    <button class="arrow-button" onclick="clickLargura()">➡️</button>
+                    <span style="padding: 2px;"></span>
+                </span>
+                <label for="largura">Largura</label>
+            </div>
+            <div class="input-group">
+                <span>
+                    <input placeholder="100 cm" type="text" id="comprimento" onkeydown="if (event.keyCode === 13) clickComprimento()">
+                    </input>
+                    <button class="arrow-button" onclick="clickComprimento()">➡️</button>
+                    <span style="padding: 2px;"></span>
+                </span>
+                <label for="comprimento">Comprimento</label>
+            </div>
+        </div>
+    </div>
+    <div id="retangulo"></div>
+    <script src="testeRetangulo.js"></script>
+
+</body>
+</html>
